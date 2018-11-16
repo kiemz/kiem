@@ -1,0 +1,25 @@
+function dig(obj,target){
+    for(var key in obj)
+        if(key==target)
+         return console.log(obj[key])
+         else
+         var a=obj['level1']
+         for(var key in a)
+         if(key==target)
+         return console.log(a[key])
+         else 
+         var b=a['level2']
+         for(var key in a[key])
+         if(key==target)
+         return console.log(b[key])
+}
+ var data={
+     level1:{
+         level2:{
+             level3:'some data'
+         }
+     }
+ }
+ dig(data,'level2')
+ dig(data,'level3')
+ dig(data,'level4')
